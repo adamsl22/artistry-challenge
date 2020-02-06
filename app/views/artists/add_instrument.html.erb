@@ -1,0 +1,6 @@
+<h2>Play a New Instrument</h2>
+<%= form_for @play, :url => play_instrument_path(@artist) do |f| %>
+    <%= f.label :instrument %>
+    <%= f.collection_select :instrument_id, @instruments, :id, :name %>
+    <%= f.submit %>
+<%end%>

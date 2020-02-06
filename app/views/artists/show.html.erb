@@ -1,0 +1,7 @@
+<h2><%= @artist.name %></h2>
+Age: <%= @artist.age %><br>
+Title: <%= @artist.title %><br>
+Instruments: <% @instruments.each do |i| %>
+    <p><%= link_to i.name, instrument_path(i) %></p>
+<%end%><br><br>
+<%= link_to "Play a new instrument", add_instrument_path(@artist) %>

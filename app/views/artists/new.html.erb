@@ -1,0 +1,15 @@
+<h2>New Artist</h2>
+<%= form_for @artist do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.submit %>
+<%end%>
+<% if @errors %>
+    <% @errors.each do |error| %>
+        <%= error %>
+    <%end%>
+<%end%>

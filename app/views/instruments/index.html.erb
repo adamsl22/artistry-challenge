@@ -1,0 +1,4 @@
+<h2>Instrument Index</h2>
+<% @instruments.each do |i| %>
+    <p><%= link_to "#{i.name} (#{i.classification})", instrument_path(i) %></p>
+<%end%>
